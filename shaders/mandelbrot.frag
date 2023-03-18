@@ -40,10 +40,10 @@ void main() {
         st.x - offset.x,
         st.y - offset.y
     );
-//    vec2 scaled = scaleM * position;
-    vec2 scaled = transform(st);
-    int steps = mandel(scaled.x - offset.x, scaled.y - offset.y);
-//    int steps = mandel((st.x - offset.x) * scale / 2.0, (st.y - offset.y) * scale / 2.0);
+    vec2 scaled = scaleM * position;
+//    vec2 scaled = transform(st);
+//    int steps = mandel(scaled.x - offset.x, scaled.y - offset.y);
+    int steps = mandel((st.x - offset.x) * scale / 2.0, (st.y - offset.y) * scale / 2.0);
     float blue = 0.5 - 1.0 / (scale * float(steps));
     float red = 0.7 - 1.0 / (scale * float(steps));
     float green = 0.6 - 1.0 / (scale * float(steps));
